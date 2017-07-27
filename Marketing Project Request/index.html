@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Marketing Project Request form">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Marketing Project Request</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1 id="pageTitle"><sup>+</sup>Marketing Project Request</h1>
+      <ul id="titleBar">
+        <li><div id="titleBar1"></div></li>
+        <li><div id="titleBar2"></div></li>
+        <li><div id="titleBar3"></div></li>
+      </ul>
+    </div>
+    <div id="process">
+      <h3 id="processTitle">Process:</h3>
+      <ol id="processList">
+        <li id="processListItem1">Fill out Marketing Project Request</li>
+        <li id="processListItem2">Marketing team assigned (including Production, Creative and Marketing leads)</li>
+        <li id="processListItem3">Kick-off meeting with</li>
+        <li id="processListItem4">Creative team engaged</li>
+        <li id="processListItem5">Creative approved and strategy executed</li>
+      </ol>
+    </div>
+    <div id="overview">
+      <h2 id="overviewTitle">Overview</h2>
+      <div id="projectDescription">
+        <table id="descriptionTable">
+          <thead>
+            <tr id="descriptionHeaderRow">
+              <th id="name">Project Name</th>
+              <th id="dateSubmitted">Date Submitted</th>
+              <th id="submittedBy">Submitted By</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="description_Answers">
+              <td><textarea id="name_Answer"></textarea></td>
+              <td><textarea id="dateSubmitted_Answer"></textarea></td>
+              <td><textarea id="submittedBy_Answer"></textarea></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="stakeholders">
+        <h3 id="stakeholdersTitle">Stakeholder Roles:</h3>
+        <table id="stakeholdersTable">
+          <tr>
+            <th id="sponsor">Executive Sponsor</th>
+            <td><textarea id="sponsor_Answer"></textarea></td>
+          </tr>
+          <tr>
+            <th id="decision">Decision Maker</th>
+            <td><textarea id="decision_Answer"></textarea></td>
+          </tr>
+          <tr>
+            <th id="contact">Day-to-Day Contact</th>
+            <td><textarea id="contact_Answer"></textarea></td>
+          </tr>
+          <tr>
+            <th id="consulted">Consulted</th>
+            <td><textarea id="consulted_Answer"></textarea></td>
+          </tr>
+          <tr>
+            <th id="informed">Informed</th>
+            <td><textarea id="informed_Answer"></textarea></td>
+          </tr>
+        </table>
+      </div>
+      <div id="focus">
+        <h3 id="focusTitle">Project Focus:</h3>
+        <table id="focusTable" border="1">
+          <tr>
+            <th id="vertical"><input type="checkbox" id="vertical-Checkbox">Vertical</th>
+            <td><textarea id="vertical_Answer"></textarea></td>
+          </tr>
+          <tr>
+            <th id="portfolio"><input type="checkbox" id="portfolio-Checkbox">Cross-Portfolio</th>
+            <td><textarea id="portfolio_Answer"></textarea></td>
+          </tr>
+          <tr>
+            <th id="specialProjects"><input type="checkbox" id="specialProjects-Checkbox">LY Special Projects</th>
+            <td><textarea id="specialProjects_Answer"></textarea></td>
+          </tr>
+          <tr>
+            <th id="otherFocus"><input type="checkbox" id="other-Checkbox">Other<br />(Please Elaborate)</th>
+            <td><textarea id="otherFocus_Answer"></textarea></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="request">
+      <h2 id="requestTitle">Project Request</h2>
+      <div id="requestListBox">
+        <ul id="requestList">
+          <li id="question">Project Overview</li>
+          <li><textarea id="overview_Answer"></textarea></li>
+          <li id="question">Objective</li>
+          <li><textarea id="objective_Answer"></textarea></li>
+          <li id="question">Target Audience</li>
+          <li><textarea id="audience_Answer"></textarea></li>
+          <li id="question">Key Messaging Points</li>
+          <li><textarea id="keyMessaging_Answer"></textarea></li>
+          <li id="question">Required Components (aka, E-blast, Video, page on together site etc)</li>
+          <li><textarea id="components_Answer"></textarea></li>
+          <li id="question">Supplemental Material (Decks, initial research + briefs, Preliminary findings etc)</li>
+          <li><textarea id="supplemental_Answer"></textarea></li>
+        </ul>
+      </div>
+    </div>
+    <div id="milestone">
+      <h3 id="milestoneTitle">Milestones/Deadlines/Phases:</h3>
+      <div id="releaseDate">
+        <p id="question">Study/Project release date/Phases and milestones along the way</p>
+        <textarea id="releaseDate_Answer"></textarea>
+      </div>
+      <div id="additionalInfo">
+        <textarea placeholder="Additional Notes..." id="additionalNotes_Answer"></textarea>
+      </div>
+    </div>
+    <div id="assignment">
+      <h2 id="assignmentTitle">Marketing Team Assignment</h2>
+      <p id="assignmentLine">Team to be assigned at intake.  Brief will be returned to submitter with this section filled out</p>
+      <table id="assignmentTable" border="1">
+        <tr>
+          <th id="production">Production Lead</th>
+          <td><textarea id="production-Answer"></textarea>
+        </tr>
+        <tr>
+          <th id="marketing">Marketing Lead</th>
+          <td><textarea id="marketing-Answer"></textarea>
+        </tr>
+        <tr>
+          <th id="creative">Creative Lead</th>
+          <td><textarea id="creative-Answer"></textarea>
+        </tr>
+        <tr>
+          <th id="otherAssignment">Other</th>
+          <td><textarea id="otherAssignment-Answer"></textarea>
+        </tr>
+      </table>
+    </div>
+    <button type="button" onclick="submit();">Submit</button>
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
+    </script>
+  </body>
+</html>
