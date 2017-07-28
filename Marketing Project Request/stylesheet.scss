@@ -7,19 +7,45 @@ body{
 table{
   width:100%;
   border: 1px solid black;
+  margin:0 auto;
+
+  tr{
+    margin:0 auto;
+  }
+
 
   th{
     font-size: 0.85em;
     border: 1px solid black;
     background: #737488;
     padding: 5px;
+      margin:0 auto;
   }
 
   td{
     border: 1px solid black;
     background:#F2F2F2;
+    vertical-align: middle;
+    text-align: center;
+      margin:0 auto;
   }
 }
+
+  @media screen and (max-width:991px){
+    table{
+      margin: 0 auto;
+        border:none;
+    }
+    tr, th, td{
+      margin: 0 auto;
+      display:block;
+    }
+
+    #assignmentLine{
+      font-size: 0.2em;
+    }
+  }
+
 
 textarea{
   background:#F2F2F2;
@@ -29,7 +55,7 @@ textarea{
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  resize:none;
+  outline: none;
 }
 
 h1{
@@ -71,8 +97,8 @@ ul{
       padding-bottom:3%;
 
   div{
-    padding:5px;
-    width: 31.5%;
+    padding-bottom:10px;
+    width: 33.33%;
     background-color: #9C8FBC;
     float:left;
   }
@@ -107,9 +133,48 @@ ul{
 #overview{
   @extend #process;
 
+  #descriptionTable{
+    background:none;
+    border:none;
+  }
+
+  #cols{
+    margin:auto;
+    border-spacing:0;
+    background:none;
+    border:none;
+  }
+  table{
+    margin:0;
+    background:white;
+  }
+  #date{
+      margin:auto;
+      border: none;
+      background:#F2F2F2;
+      vertical-align: middle;
+      display: inline-block;
+      margin-left: 15%;
+      padding:8px;
+  }
+
   #stakeholdersTable{
+
     th{
       width: 25%;
+    }
+
+    @media screen and (max-width:991px){
+      table{
+        margin: 0 auto;
+          border:none;
+      }
+      tr, th, td{
+        margin: 0 auto;
+        padding:0;
+        display:block;
+        width:100%;
+      }
     }
   }
 
@@ -119,19 +184,13 @@ ul{
 }
 
 #request{
-  @extend #process;
-  margin-left:0;
-  padding-right:5%;
-  width:95%;
   padding-bottom: 5px;
-
-h2{
-  margin-left:5%;
-}
 
   li{
     border: 1px solid black;
     background:#F2F2F2;
+    padding-bottom: 1%;
+    padding-top: 1%;
   }
 
   #question{
@@ -139,6 +198,12 @@ h2{
       border: 1px solid black;
       background: #737488;
       color: white;
+  }
+
+  @media screen and (max-width: 991px){
+    ul{
+      margin-right: 10%;
+    }
   }
 }
 
@@ -149,7 +214,8 @@ h2{
 
   #question{
       margin:auto;
-      padding: 5px;
+      padding-top: 1%;
+      padding-bottom: 1%;
   }
 
   textarea{
@@ -157,11 +223,17 @@ h2{
     padding-bottom: 10%;
     border: 1px solid black;
   }
+
+  @media screen and (max-width:991px){
+    h3{
+      font-size: 0.75em;
+    }
+  }
 }
 
 #assignment{
   @extend #process;
-  margin-bottom: 15%;
+  margin-bottom: 10%;
   margin-left: 0%;
   margin-right: 0%;
 
@@ -180,15 +252,71 @@ h2{
   th{
     width:25%;
   }
+
+  @media screen and (max-width:991px){
+    table{
+      margin: 0 auto;
+        border:none;
+    }
+    tr, th, td{
+      margin: 0 auto;
+      padding:0;
+      display:block;
+      width:100%;
+    }
+
+    p{
+      font-size:0.65em;
+    }
+  }
 }
 
-button{
-  -webkit-box-shadow: 2px 2px 4px lightgrey;
-  -moz-box-shadow: 2px 2px 4px lightgrey;
-  box-shadow: 2px 2px 4px lightgrey;
-  padding: 5px;
-  border-radius: 5px;
-  width:10%;
-  margin-bottom: 10%;
-  margin-left: 45%;
+#footer{
+  text-align:center;
+  width: 100%;
+  margin: auto;
+  padding-bottom:10%;
+  align: center;
+
+  div{
+    padding:5px;
+    width: 45%;
+    float:left;
+  }
+
+  #submitButton{
+    padding:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button{
+      -webkit-box-shadow: 2px 2px 4px lightgrey;
+      -moz-box-shadow: 2px 2px 4px lightgrey;
+      box-shadow: 2px 2px 4px lightgrey;
+      padding: 5px;
+      border-radius: 5px;
+    }
+  }
+
+  #feedback{
+    h4{
+      color:black;
+      font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+      margin:0;
+    }
+
+    #error_Answer{
+      border: 1px solid black;
+      margin:0;
+    }
+  }
+
+  @media screen and (max-width: 991px)
+  {
+    div{
+      width: 40%;
+      padding:0;
+    }
+  }
 }

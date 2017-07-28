@@ -5,6 +5,9 @@
     <meta name="description" content="Marketing Project Request form">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <title>Marketing Project Request</title>
   </head>
   <body>
@@ -30,20 +33,37 @@
       <h2 id="overviewTitle">Overview</h2>
       <div id="projectDescription">
         <table id="descriptionTable">
-          <thead>
-            <tr id="descriptionHeaderRow">
-              <th id="name">Project Name</th>
-              <th id="dateSubmitted">Date Submitted</th>
-              <th id="submittedBy">Submitted By</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr id="description_Answers">
-              <td><textarea id="name_Answer"></textarea></td>
-              <td><textarea id="dateSubmitted_Answer"></textarea></td>
-              <td><textarea id="submittedBy_Answer"></textarea></td>
-            </tr>
-          </tbody>
+          <tr>
+            <td id="cols">
+              <table>
+                <tr id="descriptionHeaderRow">
+                  <th id="name">Project Name</th>
+                </tr>
+                <tr id="description_Answers">
+                  <td><textarea id="name_Answer"></textarea></td>
+                </tr>
+              </table>
+            </td>
+            <td id="cols">
+              <table>
+                <tr id="descriptionHeaderRow">
+                  <th id="dateSubmitted">Date Submitted</th>
+                </tr>
+                <tr id="description_Answers">
+                  <td><input type="date" id="date"></td>
+                </tr>
+              </table>
+            </td>
+            <td id="cols">
+              <table>
+                <tr id="descriptionHeaderRow">
+                  <th id="submittedBy">Submitted By</th>
+                </tr>
+                <tr id="description_Answers">
+                  <td><textarea id="submittedBy_Answer"></textarea></td>
+                </tr>
+              </table>
+            </td></tr>
         </table>
       </div>
       <div id="stakeholders">
@@ -75,19 +95,19 @@
         <h3 id="focusTitle">Project Focus:</h3>
         <table id="focusTable" border="1">
           <tr>
-            <th id="vertical"><input type="checkbox" id="vertical-Checkbox">Vertical</th>
+            <th id="vertical"><labeL><input type="checkbox" id="vertical-Checkbox">Vertical</label></th>
             <td><textarea id="vertical_Answer"></textarea></td>
           </tr>
           <tr>
-            <th id="portfolio"><input type="checkbox" id="portfolio-Checkbox">Cross-Portfolio</th>
+            <th id="portfolio"><labeL><input type="checkbox" id="portfolio-Checkbox">Cross-Portfolio</label></th>
             <td><textarea id="portfolio_Answer"></textarea></td>
           </tr>
           <tr>
-            <th id="specialProjects"><input type="checkbox" id="specialProjects-Checkbox">LY Special Projects</th>
+            <th id="specialProjects"><labeL><input type="checkbox" id="specialProjects-Checkbox">LY Special Projects</label></th>
             <td><textarea id="specialProjects_Answer"></textarea></td>
           </tr>
           <tr>
-            <th id="otherFocus"><input type="checkbox" id="other-Checkbox">Other<br />(Please Elaborate)</th>
+            <th id="otherFocus"><labeL><input type="checkbox" id="other-Checkbox">Other<br />(Please Elaborate)</label></th>
             <td><textarea id="otherFocus_Answer"></textarea></td>
           </tr>
         </table>
@@ -144,9 +164,16 @@
         </tr>
       </table>
     </div>
-    <button type="button" onclick="submit();">Submit</button>
-    <script>
-      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
-    </script>
+    <div id="footer">
+      <ul>
+        <li><div id="feedback">
+          <h4>Any problems/errors with the form?</h4>
+          <textarea rows="3" id="error_Answer"></textarea>
+        </div></li>
+        <li><div id="submitButton">
+          <button type="button" id="submit" onclick="submit();">Submit All</button>
+        </div></li>
+      </ul>
+    </div>
   </body>
 </html>
